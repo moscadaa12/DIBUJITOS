@@ -1,30 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentacion grupo</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Infografía: Proceso de Creación y Conexión de un Proyecto SourceForge con Git</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #334e68;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #1e3a8a;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p.intro {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.1em;
+            color: #52667a;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #f8fafc;
+        }
+
+        .section h2 {
+            color: #1e3a8a;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            gap: 20px;
+        }
+
+        .step-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #3b82f6;
+            background: #dbeafe;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex-grow: 1;
+        }
+
+        .step-content h3 {
+            color: #1e3a8a;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: #52667a;
+        }
+        
+        .code-block {
+            background-color: #e2e8f0;
+            color: #2d3748;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+        }
+
+        .note {
+            background-color: #fffbeb;
+            border-left: 4px solid #f6ad55;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        
+        .note p {
+            margin: 0;
+            color: #744210;
+        }
+    </style>
+</head>
 <body>
-  <h3>Proyecto de Pagina web</h3>
-  <p>GRUPO : Dibujitos</p>
 
-  <p>INTEGRANTES:</p>
-  <ul>
-    <li>Oscar Ailthoon Espinoza Nieto</li>
-    <li>Juan Carlos Lope Pari</li>
-    <li>Emerson Mamani Ccallavilca</li>
-    <li>Bruce Saul Barrios Morales</li>
-  </ul>
+<div class="container">
+    <h1>Infografía: Conectando tu Proyecto Local de Git con SourceForge</h1>
+    <p class="intro">
+        Este flujo de trabajo detalla el proceso correcto para subir tu código fuente a un repositorio en SourceForge,
+        utilizando las herramientas de línea de comandos de Git.
+    </p>
 
-  <a href="pagina2.html">DOCENTE</a>
+    <div class="section">
+        <h2>Paso 1: Creación del Proyecto en SourceForge</h2>
+        <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Crear una cuenta y proyecto</h3>
+                <p>Primero, crea una cuenta en SourceForge. Una vez dentro, ve a la página principal y selecciona la opción para <strong>"Registrar un Proyecto"</strong>. Deberás proporcionar un nombre único para el proyecto, una descripción y una licencia de código abierto.</p>
+                <div class="note">
+                    <p><strong>Nota:</strong> Los datos personales requeridos se limitan a lo necesario para tu cuenta, no los que mencionaste (celular, ocupación, etc.).</p>
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>Obtener la dirección del repositorio Git</h3>
+                <p>Una vez que el proyecto esté activo, navega a la sección de <strong>"Code"</strong> o <strong>"Source Code"</strong> en la página de tu proyecto. Aquí encontrarás la dirección URL para el repositorio de Git que SourceForge ha creado para ti. Esta URL es crucial para conectar tu repositorio local.</p>
+            </div>
+        </div>
+    </div>
 
-  <p>
-    <img src="images/dibujos.png" alt="Imagen grupo">
-  </p>
+    <div class="section">
+        <h2>Paso 2: Preparación del Código en Git Local</h2>
+        <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>Inicializar el repositorio local</h3>
+                <p>Abre tu terminal o Git Bash en la carpeta de tu proyecto. Si aún no tienes un repositorio Git, inicialízalo. Luego, haz un primer commit para guardar el estado inicial de tus archivos.</p>
+                <div class="code-block">
+                    <code>git init</code><br>
+                    <code>git add .</code><br>
+                    <code>git commit -m "Primer commit"</code>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/nXSyPzIZl8U?si=Ibn-GJKmRCXjNGSG"
-    title="YouTube video player" allowfullscreen></iframe>
+    <div class="section">
+        <h2>Paso 3: Conexión y Subida del Código</h2>
+        <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+                <h3>Conectar con el repositorio remoto</h3>
+                <p>Ahora, asocia tu repositorio local con el repositorio remoto en SourceForge usando la URL que obtuviste en el paso 2.</p>
+                <div class="code-block">
+                    <code>git remote add origin [URL_DEL_REPOSITORIO]</code><br>
+                    <p><em>(Ejemplo: git remote add origin https://git.code.sf.net/p/tunombredeusuario/tuproyecto)</em></p>
+                </div>
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+                <h3>Subir el código a SourceForge</h3>
+                <p>Finalmente, sube tu código local al repositorio remoto. Para la rama principal, se usa el comando <code>git push</code>. Es posible que tengas que autenticarte con tu nombre de usuario y contraseña de SourceForge.</p>
+                <div class="code-block">
+                    <code>git push -u origin master</code>
+                </div>
+                <div class="note">
+                    <p><strong>Nota:</strong> Este es el comando correcto para subir el código. Un simple <code>git push</code> sin los parámetros adecuados no funcionaría, ya que Git necesita saber a dónde enviar los archivos.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 </body>
 </html>
